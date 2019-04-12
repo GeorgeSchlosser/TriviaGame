@@ -31,12 +31,22 @@ var unanswered = 0;
 function run() {
     timerId = setInterval(decrement, 1000);
     $("#timer").html("<h2>" + timer + "</h2>");
-    console.log(timer);
+    // console.log(timer);
+};
+
+function stop() {
+    clearInterval(timerId);
 };
 
 function decrement() {
     timer--;
     $("#timer").html("<h2>" + timer + "</h2>");
+    if (timer < 0) {
+        console.log(timer);
+        stop();
+        $("#game").addClass("hidden");
+        $("#post").removeClass("hidden");
+    }
 };
 
 $("#start-btn").on("click", function(){
@@ -48,11 +58,10 @@ $("#start-btn").on("click", function(){
 $("#submit-btn").on("click", function(){
     $("#game").addClass("hidden");
     $("#post").removeClass("hidden");
+    stop();
     // score calculation
 });
-// if (timer === 0);
-//     $("#game").addClass("hidden");
-//     $("#post").removeClass("hidden");
+
 
 
 

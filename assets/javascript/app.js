@@ -23,12 +23,24 @@ var unanswered = 0;
 
 // FUNCTIONS
 // ===================================
-
+// function startGame(){
+//     $("#game").removeClass("hidden");
+//     $("#pre").addClass("hidden");
+// };
+$("#start-btn").on("click", function(){
+    $("#game").removeClass("hidden");
+    $("#pre").addClass("hidden");
+});
 
 
 // MAIN FUNCTIONS
 // ===================================
 // when start is pressed gameStart = true;
     // if gameStart = true display timer and questions
+// $(document).ready(pregame ());
+// $("#start-btn").on("click", startGame());
 
+
+
+ 
 

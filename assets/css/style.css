@@ -1,0 +1,4 @@
+.hidden {
+    display: none;
+    /* how/why manipulating DOM in this way: https://stackoverflow.com/questions/10148660/javascript-hide-a-div-at-startup-load */
+}

@@ -32,6 +32,13 @@ $("#start-btn").on("click", function(){
     $("#pre").addClass("hidden");
 });
 
+$("#submit-btn").on("click", function(){
+    $("#game").addClass("hidden");
+    $("#post").removeClass("hidden");
+    // score calculation
+
+});
+
 
 // MAIN FUNCTIONS
 // ===================================

@@ -13,6 +13,7 @@ when game ends > compare user answer w/ correct answer, change DOM
 var gameStart = false;
 var gameEnd = false;
 var timer = 30;
+var timerId;    //holds interval ID when executed
 var questions = [];
 var correct = 0;
 var incorrect = 0;
@@ -27,17 +28,33 @@ var unanswered = 0;
 //     $("#game").removeClass("hidden");
 //     $("#pre").addClass("hidden");
 // };
+function run() {
+    timerId = setInterval(decrement, 1000);
+    $("#timer").html("<h2>" + timer + "</h2>");
+    console.log(timer);
+};
+
+function decrement() {
+    timer--;
+    $("#timer").html("<h2>" + timer + "</h2>");
+};
+
 $("#start-btn").on("click", function(){
     $("#game").removeClass("hidden");
     $("#pre").addClass("hidden");
+    run();
 });
 
 $("#submit-btn").on("click", function(){
     $("#game").addClass("hidden");
     $("#post").removeClass("hidden");
     // score calculation
-
 });
+// if (timer === 0);
+//     $("#game").addClass("hidden");
+//     $("#post").removeClass("hidden");
+
+
 
 
 // MAIN FUNCTIONS

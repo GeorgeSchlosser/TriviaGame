@@ -8,64 +8,78 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+    
     <!-- pre-game -->
-    <div class="row">
-        <div class="col">
-            <h1>TITLE</h1>
+    <div class="container" id="pre">
+        <div class="row">
+            <div class="col">
+                <h1>TITLE</h1>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col">
+                <button id="start-btn">START</button>
+            </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <button>START</button>
-        </div>
-    </div>
 
     <!-- game -->
-    <div class="row">
-        <div class="col">
-            <h1>TITLE</h1>
+    <div class="container game">
+
+        <div class="row">
+            <div class="col">
+                <h1>TITLE</h1>
+            </div>
         </div>
+            
+        <div class="row">
+            <div class="col" id="timer">
+                <!-- TIMER -->
+            </div>
+        </div>
+            
+        <div class="row" id="questions">
+            <!-- insert question divs -->
+        </div>
+            
+        <div class="row">
+            <div class="col">
+                <button id="submit-btn">SUBMIT</button>
+            </div>
+        </div>
+
     </div>
 
-    <div class="row">
-        <div class="col">
-            <!-- TIMER -->
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- insert question divs -->
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <button>SUBMIT</button>
-        </div>
-    </div>
 
     <!-- post-game -->
-    <div class="row">
-        <div class="col">
-            <h1>TITLE</h1>
+    <div class="container" id="post">
+
+        <div class="row">
+            <div class="col">
+                <h1>TITLE</h1>
+            </div>
         </div>
+            
+        <div class="row">
+            <div class="col">
+                <h3>Finished!</h3>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col">
+                <h3>Correct Answers: <span id="correct"></span></h3>
+                <br>
+                <h3>Incorrect Answers: <span id="incorrect"></span></h3>
+                <br>
+                <h3>Unanswered Questions: <span id="unanswered"></span></h3>
+            </div>
+        </div>
+
     </div>
 
-    <div class="row">
-        <div class="col">
-            <h3>Finished!</h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <h3>Correct Answers: <span></span></h3>
-            <br>
-            <h3>Incorrect Answers: <span></span></h3>
-            <br>
-            <h3>Unanswered Questions: <span></span></h3>
-        </div>
-    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

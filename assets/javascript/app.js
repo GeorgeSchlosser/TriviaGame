@@ -14,6 +14,7 @@ var gameStart = false;
 var gameEnd = false;
 var timer = 30;
 var timerId;    //holds interval ID when executed
+// https://www.imdb.com/title/tt0076759/trivia
 var quiz = [
     {
         question: "What creature's skeleton does C-3PO walk past on Tatoine?",

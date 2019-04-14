@@ -81,12 +81,34 @@ function decrement() {
     }
 };
 
+// function to grab questions from array
+    // adapted from https://stackoverflow.com/questions/19590865/from-an-array-of-objects-extract-value-of-a-property-as-array
+var getQuestions = quiz.map(({question}) => question);
+// loop through getQuestions and push to html
+function htmlQuestions () {
+    for (let i = 0; i < getQuestions.length; i++) {
+        var questionDiv = $("<div>");
+        questionDiv.attr("h3", getQuestions[i]);
+        $("#questions").append(getQuestions[i] + "<br>");
+        // var h3 = $("<h3>").text(getQuestions[i]);
+        // getQuestions.forEach($("#questions").html("<h3>" + getQuestions[i] + "</h3>"));
+        
+    }
+};
+
+
+// starts games
 $("#start-btn").on("click", function(){
     $("#game").removeClass("hidden");
     $("#pre").addClass("hidden");
     run();
+    // function to put questions in html
+    console.log(htmlQuestions);
+    htmlQuestions ();
+        
 });
 
+// ends game
 $("#submit-btn").on("click", function(){
     $("#game").addClass("hidden");
     $("#post").removeClass("hidden");

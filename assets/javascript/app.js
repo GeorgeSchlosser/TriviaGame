@@ -47,6 +47,7 @@ var quiz = [
     },
 
 ];
+var userResponse = [];
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
@@ -84,6 +85,7 @@ function decrement() {
 // function to grab questions from array
     // adapted from https://stackoverflow.com/questions/19590865/from-an-array-of-objects-extract-value-of-a-property-as-array
 var getQuestions = quiz.map(({question}) => question);
+var getCorrect = quiz.map(({correct}) => correct);
 // loop through getQuestions and push to html
 function htmlQuestions () {
     for (let i = 0; i < getQuestions.length; i++) {
@@ -105,6 +107,7 @@ $("#start-btn").on("click", function(){
     // function to put questions in html
     console.log(htmlQuestions);
     htmlQuestions ();
+    console.log(getCorrect);
         
 });
 
@@ -113,7 +116,13 @@ $("#submit-btn").on("click", function(){
     $("#game").addClass("hidden");
     $("#post").removeClass("hidden");
     stop();
+    // function to take user responses and compare w/ gatAnswers
+        // function to calculate correct & incorrect answers, unanswered questions
+            // given the chance, I'd consider separating quiz into 3 separate arrays o_O
     // score calculation
+    $("#correct").html(correct);
+    $("#incorrect").html(incorrect);
+    $("#unanswered").html(unanswered);
 });
 
 
